@@ -6,6 +6,8 @@ import re
 
 
 def check(text, keywords_list):
+    keywords_list = list(map(lambda x: x.lower(), keywords_list))
+    text = text.lower()
     words_re = re.compile("|".join(keywords_list))
     if words_re.search(text):
         print(str(words_re.search(text)))
