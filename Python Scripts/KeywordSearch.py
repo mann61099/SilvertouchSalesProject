@@ -8,11 +8,12 @@ import re
 def check(text, keywords_list):
     words_re = re.compile("|".join(keywords_list))
     if words_re.search(text):
+        print(str(words_re.search(text)))
         return True
     return False
 
 
-text = "this is a test"
+text = "I'm looking for candidates who are 1-2 years out of school and have an interest in working in a mission-driven company within the healthcare sector of Boston. Candidates should have an administrative and/or customer service background and experience using a CRM system is a plus! Email me for consideration: cryan@monumentstaffing.net Location: Remote! Non-MA residents are welcome to apply. #hiring #customerservice #administrative #healthcare #remotejob"
 keywords_list = [
     "Software",
     "Application",
@@ -31,7 +32,7 @@ keywords_list = [
     "Mobile application",
     "iOS",
     "android",
-    "app",
+    "app ",
     "enterprise mobile application",
     "enterpise mobility solution",
     "Magento",
@@ -44,7 +45,7 @@ keywords_list = [
     "custom cms",
     "joomla",
     "website",
-    "web",
+    "web ",
     "SAP Support",
     "SAP B1 Support",
     "SAP Business One Support",
