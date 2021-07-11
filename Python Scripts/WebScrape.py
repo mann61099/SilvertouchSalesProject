@@ -12,8 +12,10 @@ url = "https://www.linkedin.com"
 page = browser.get(url)
 html = page.soup
 form = html.select("form")[0]
-form.select("#session_key")[0]["value"] = "f20190790@pilani.bits-pilani.ac.in"
-form.select("#session_password")[0]["value"] = "rrmk1662"
+# username
+form.select("#session_key")[0]["value"] = ""
+# password
+form.select("#session_password")[0]["value"] = ""
 home_page = browser.submit(form, page.url)
 print("Logged in")
 
